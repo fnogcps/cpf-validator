@@ -1,12 +1,12 @@
 {
-  "name": "jest",
+  "name": "cpf-validator",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "cpf.ts",
   "scripts": {
     "test": "jest"
   },
-  "author": "",
+  "author": "Felipe Nogueira <contato.fnog@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^29.4.0",
