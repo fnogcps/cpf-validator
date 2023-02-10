@@ -8,11 +8,14 @@ describe('CPF validation', function () {
   test("CPF w/dots is valid", () => {
     expect(cpf.isValidCPF("136.183.650-47")).toBe(true);
   });
-  test("invalid CPF returns false", () => {
+  test("Invalid CPF length returns false #1", () => {
     expect(cpf.isValidCPF("1361865047")).toBe(false);
   });
-  test("Invalid CPF returns false", () => {
+  test("Invalid CPF length returns false #2", () => {
     expect(cpf.isValidCPF("136183650447")).toBe(false);
+  });
+  test("CPF containing letters returns false #3", () => {
+    expect(cpf.isValidCPF("1361836KZVa")).toBe(false);
   });
 });
 

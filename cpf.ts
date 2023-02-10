@@ -1,6 +1,6 @@
 export default class CPF {
   isValidCPF(cpf: string): boolean {
-    const fcpf: string = cpf.replace(/\.|-/g, "");
+    const fcpf: string = cpf.replace(/\.|-|[A-Z][a-z]/g, "");
     return fcpf.length == 11;
   }
 
