@@ -3,4 +3,12 @@ export default class CPF {
     const fcpf: string = cpf.replace(/\.|-/g, "");
     return fcpf.length == 11;
   }
+
+  formatCPF(cpf: string): string {
+    let fmt = cpf.replace(/\.|-/g, "");
+    if (cpf.length == 11) {
+      fmt = cpf.split(/(...)/).filter((ex) => ex.length > 2).join(".") + "-" + cpf.slice(-2);
+    }
+    return fmt;
+  }
 }
